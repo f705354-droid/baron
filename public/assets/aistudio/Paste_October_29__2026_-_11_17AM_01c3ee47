@@ -1,0 +1,1082 @@
+# MASTER PROMPT — BARON NEXUS
+## Enterprise AI Cybersecurity Operations, Authorized Penetration Testing & Threat Intelligence Platform
+
+### 1. YOUR ROLE AND MISSION
+
+Act as a principal software architect, senior full-stack engineer, cybersecurity platform engineer, AI systems architect, UI/UX designer, database engineer, DevSecOps engineer, and quality assurance lead.
+
+Your mission is to DESIGN, IMPLEMENT, TEST, and CONTINUOUSLY IMPROVE a new software platform named:
+
+**BARON NEXUS — AI Cybersecurity Operations Platform**
+
+This must be a new, independently structured, professional application inspired by the broad scope of the supplied Al-Baron Cyber Empire source code, but with better architecture, usability, security, maintainability, integration, reliability, and testing.
+
+Do not merely describe the application. Build the actual application in the current Google AI Studio project.
+
+Do not stop after creating a landing page, a dashboard mockup, a collection of static cards, or a prototype containing nonfunctional buttons.
+
+The result must be a functioning full-stack application with real navigation, persistent data, meaningful backend operations, useful cybersecurity workflows, error handling, authentication, authorization, audit trails, and automated tests.
+
+Do not claim that an integration, scanner, security check, AI operation, or external service works unless you have implemented and verified it.
+
+If an external service requires credentials or infrastructure that is unavailable, build a clear integration interface, a safe demonstration mode where appropriate, setup instructions, and explicit connection status. Never fabricate live scan results or pretend that an external service has been contacted.
+
+### 2. CORE PRODUCT VISION
+
+Build a modular cybersecurity platform that brings together:
+
+- Security operations and monitoring.
+- Authorized asset discovery and inventory.
+- Penetration-testing project management.
+- Safe vulnerability assessment and validation.
+- Attack-surface management.
+- Attack-path and relationship analysis.
+- Threat intelligence and IOC management.
+- AI-assisted security analysis.
+- Adversary emulation in isolated laboratories.
+- Cloud, container, web application, API, and infrastructure security assessment.
+- Incident management and defensive response.
+- Security reporting and evidence management.
+- Plugin and integration management.
+- Team collaboration and role-based access control.
+- An extensible backend and a modern web interface.
+
+The platform must prioritize evidence-based security analysis, repeatable assessments, understandable results, controlled automation, and remediation.
+
+Its purpose is to help authorized security professionals understand exposure, validate findings, improve defenses, and manage security assessments through one coherent interface.
+
+### 3. IMPORTANT SAFETY AND AUTHORIZATION REQUIREMENTS
+
+Implement the platform for legitimate, authorized security testing and defensive operations.
+
+All assessment functionality must operate under explicit authorization and a defined scope.
+
+The platform must not implement or automate credential theft, phishing campaigns designed to steal credentials, malware deployment, ransomware, destructive payloads, covert command-and-control, persistence on unauthorized systems, evasion of security monitoring, unauthorized data exfiltration, or exploitation of third-party targets.
+
+For potentially sensitive testing, use benign verification, controlled laboratory simulations, synthetic data, and non-destructive checks.
+
+Implement the following mandatory controls:
+
+1. A scope registry defining authorized assets, domains, IP ranges, environments, exclusions, and testing windows.
+2. A server-side scope validation service that runs before every assessment operation.
+3. A policy engine that determines which actions are permitted.
+4. An approval workflow for sensitive operations.
+5. Rate limits, concurrency limits, timeouts, cancellation, and resource quotas.
+6. A global emergency stop for running assessment jobs.
+7. An immutable-style, append-oriented audit history with appropriate integrity controls.
+8. Role-based permissions and project-level access restrictions.
+9. Safe defaults that disable active assessment until a valid scope and authorization are established.
+10. Explicit separation between simulated findings and findings obtained from actual assessments.
+
+Do not trust client-side authorization checks alone.
+
+Never expose secrets, API keys, session tokens, or sensitive internal error messages to the browser.
+
+If an action is outside the configured scope, reject it on the server and explain why.
+
+### 4. TECHNOLOGY STACK
+
+Use the technology stack supported by the current Google AI Studio Build environment.
+
+Preferred stack:
+
+**Frontend**
+- React.
+- TypeScript.
+- Vite if supported by the generated environment.
+- A consistent component system and reusable design tokens.
+- Tailwind CSS or another compatible styling solution.
+- Accessible charts, tables, forms, navigation, dialogs, and notifications.
+- A data-fetching and caching strategy appropriate to the project.
+
+**Backend**
+- Node.js and TypeScript.
+- Express or the backend framework best supported by the current runtime.
+- Versioned REST API.
+- Server-side input validation.
+- Centralized authorization and error handling.
+- Structured logging.
+- Background-job abstractions for longer-running tasks.
+
+**Database and authentication**
+- Firebase Authentication and Firestore when supported and appropriate by the current environment.
+- Otherwise, select a compatible persistent database and document the decision.
+- Use a repository/data-access layer so database implementation details do not leak into business logic.
+- Include database indexes, security rules, migrations or setup scripts where applicable.
+
+**AI integration**
+- Gemini API through the server-side runtime.
+- Securely managed API credentials.
+- Structured model responses validated against schemas.
+- Explicit model timeout and failure handling.
+- Usage limits and configurable AI features.
+
+**Testing**
+- TypeScript type checking.
+- Unit tests.
+- API integration tests.
+- Component tests where useful.
+- End-to-end tests for critical workflows.
+- Security-focused tests for authentication, authorization, scope enforcement, and input validation.
+
+Do not introduce unnecessary dependencies. Select compatible versions and use the package manager and scripts already configured by the environment where possible.
+
+If the environment does not support one of these technologies, adapt the architecture without abandoning the required functionality.
+
+### 5. DESIGN SYSTEM AND VISUAL IDENTITY
+
+Create a premium, modern security operations interface.
+
+The product should feel like a professional enterprise security platform, not a generic admin template.
+
+Visual direction:
+- Dark graphite and near-black backgrounds.
+- Restrained electric-blue and cyan accents.
+- Violet accents for AI features.
+- Amber for warnings.
+- Red only for critical issues and dangerous states.
+- Green for verified or healthy states.
+- Clear typography and strong visual hierarchy.
+- Subtle borders, controlled shadows, and restrained animations.
+- Excellent information density without visual clutter.
+
+Avoid excessive neon, giant decorative headings, unnecessary gradients, and oversized cards.
+
+Use responsive layouts for desktop, laptop, tablet, and mobile.
+
+Create a collapsible left sidebar, a contextual top bar, breadcrumbs, a global search, a command palette, notifications, and a user/account menu.
+
+Every page must have meaningful loading, empty, error, and populated states.
+
+Use a consistent icon library and a centralized theme.
+
+Include accessible keyboard navigation, visible focus states, adequate contrast, labels for form controls, and useful screen-reader descriptions.
+
+Persist user interface preferences such as theme, sidebar state, and selected workspace when appropriate.
+
+### 6. APPLICATION NAVIGATION
+
+Create the following primary navigation sections.
+
+1. Overview
+2. AI Security Copilot
+3. Assets and Attack Surface
+4. Assessments
+5. Vulnerability Management
+6. Attack Path Analysis
+7. Threat Intelligence
+8. Security Operations
+9. Incident Response
+10. Cloud and Container Security
+11. Web and API Security
+12. Laboratory and Emulation
+13. Reports and Evidence
+14. Integrations
+15. Plugin Marketplace
+16. Team and Access Control
+17. Audit Log
+18. System Health
+19. Settings
+
+Each section must have a real route, a meaningful page component, and a documented data source.
+
+Do not create links that all lead to the same generic placeholder page.
+
+If a feature is not yet implemented, label it as planned or unavailable and provide a clear explanation instead of presenting fictional functionality as complete.
+
+### 7. OVERVIEW DASHBOARD
+
+Create a useful executive and technical dashboard with:
+
+- Total inventoried assets.
+- Assets by environment and criticality.
+- Open findings by severity.
+- Verified findings versus unverified candidates.
+- Critical remediation backlog.
+- Assessment activity over time.
+- Recent security events.
+- Active incidents.
+- Expiring assessment authorizations.
+- Recent jobs and their statuses.
+- Data-source connectivity status.
+- AI analysis activity and usage.
+- Recent changes and audit events.
+
+All dashboard metrics must derive from actual persisted application data.
+
+Create useful filtering by workspace, project, date range, environment, severity, and assessment status.
+
+Provide drill-down navigation from metrics to the underlying records.
+
+Include a first-run onboarding state explaining how to create a workspace, define scope, add assets, and run a safe assessment.
+
+### 8. WORKSPACES AND PROJECT MANAGEMENT
+
+Implement multi-project organization.
+
+Each project should contain:
+- Name and description.
+- Owner and authorized team members.
+- Scope and exclusions.
+- Authorization status.
+- Start and end dates.
+- Environment classification.
+- Assessment policies.
+- Assets.
+- Assessment runs.
+- Findings.
+- Evidence.
+- Reports.
+- Audit events.
+
+A project must not inherit unrestricted permissions from another project.
+
+Implement project creation, editing, archiving, deletion with confirmation, membership management, and project-level filtering.
+
+Record significant changes in the audit log.
+
+### 9. ASSET INVENTORY AND ATTACK SURFACE
+
+Create an asset management engine supporting records for:
+
+- Domains and subdomains.
+- IP addresses and network ranges.
+- Hosts and servers.
+- Web applications.
+- API endpoints.
+- Cloud resources.
+- Containers and Kubernetes resources.
+- Databases.
+- Devices and infrastructure components.
+- Identity and access resources.
+- Third-party assets explicitly included in an authorized scope.
+
+Asset fields should include:
+- Unique identifier.
+- Asset type.
+- Display name.
+- Hostname or address.
+- Environment.
+- Owner.
+- Business criticality.
+- Exposure classification.
+- Tags.
+- Discovery source.
+- First-seen and last-seen timestamps.
+- Verification status.
+- Related findings.
+- Related assessments.
+- Notes and evidence references.
+
+Implement deduplication, import and export, asset history, filters, sorting, bulk updates, and relationship navigation.
+
+For real discovery integrations, require explicit authorization and validate every target against the approved scope.
+
+Provide an offline demonstration dataset that is visibly labeled as synthetic.
+
+Do not fabricate real external discovery results.
+
+### 10. ASSESSMENT ORCHESTRATION ENGINE
+
+Build a reusable assessment-job engine rather than embedding execution logic independently in every module.
+
+Every job must have:
+- Job identifier.
+- Workspace and project.
+- Assessment profile.
+- Requested assets.
+- Scope validation result.
+- Approval state.
+- Execution status.
+- Start and completion timestamps.
+- Progress information.
+- Resource limits.
+- Cancellation state.
+- Structured findings.
+- Logs and evidence references.
+- Error classification.
+
+Use an explicit lifecycle:
+
+DRAFT → SCOPE_VALIDATION → AWAITING_APPROVAL → QUEUED → RUNNING → COMPLETED / FAILED / CANCELLED.
+
+Reject invalid transitions.
+
+Implement a job queue abstraction, concurrency limits, retry policies for safe transient failures, and idempotency where appropriate.
+
+Long-running tasks must not block the web request handler.
+
+If a real external scanner cannot run inside the current hosted environment, implement a provider interface and a clearly labeled simulated provider. Do not falsely report that a real scanner has executed.
+
+Provide job history, progress monitoring, cancellation, and diagnostic details.
+
+### 11. AUTHORIZED RECONNAISSANCE
+
+Build an extensible reconnaissance subsystem for authorized environments.
+
+Capabilities should include:
+- Asset and scope review.
+- DNS record analysis.
+- WHOIS information when a legitimate data provider is configured.
+- Certificate metadata analysis.
+- Authorized service inventory.
+- Technology fingerprint review using collected evidence.
+- Import of results from supported scanners.
+- Identification of stale, duplicated, and unknown assets.
+- Correlation of discovered services with known asset records.
+
+Use a provider architecture for external tools and data sources.
+
+Each provider must declare its supported operations, required configuration, permissions, timeout, and result schema.
+
+Validate all targets server-side before execution.
+
+Implement strict parsing, bounded resource consumption, safe process execution, and detailed errors.
+
+Do not generate arbitrary shell commands from AI output.
+
+Do not implement stealth scanning or evasion features.
+
+### 12. VULNERABILITY MANAGEMENT AND SAFE VALIDATION
+
+Create a vulnerability lifecycle management system.
+
+Support:
+- Finding discovery and import.
+- Finding deduplication.
+- Severity and confidence.
+- Affected assets.
+- Evidence and reproduction metadata.
+- Source references.
+- First-seen and last-seen dates.
+- Status transitions.
+- Ownership and remediation deadlines.
+- Risk acceptance with justification and expiration.
+- False-positive review.
+- Retesting.
+- Remediation verification.
+- Closure and reopening.
+
+Use a consistent severity model and a separate confidence score.
+
+Where appropriate, support CVE identifiers, CVSS metadata, and references to trusted advisories.
+
+Do not invent CVE information or claim that a vulnerability has been verified merely because a version string appears affected.
+
+Use the following statuses:
+
+- New.
+- Needs validation.
+- Confirmed.
+- Remediation planned.
+- In progress.
+- Retest required.
+- Resolved.
+- Accepted risk.
+- False positive.
+
+Implement non-destructive validation checks where possible.
+
+Potentially destructive checks must be disabled by default and require explicit authorization and a suitable isolated environment.
+
+Never automatically execute an exploit simply because a finding is classified as critical.
+
+### 13. ATTACK-PATH AND GRAPH ANALYSIS
+
+Build a graph-based security analysis module.
+
+Represent:
+- Assets.
+- Identities.
+- Services.
+- Permissions.
+- Findings.
+- Network relationships.
+- Trust relationships.
+- Cloud resources.
+- Security controls.
+- Evidence sources.
+
+Represent relationships as typed, timestamped edges with provenance and confidence.
+
+Provide:
+- Interactive graph visualization.
+- Search and filtering.
+- Expand and collapse.
+- Node details.
+- Relationship details.
+- Risk annotations.
+- Evidence links.
+- Export of permitted graph data.
+- History of graph changes.
+
+Calculate risk based on documented factors such as exposure, criticality, verified findings, privilege level, and confidence.
+
+Clearly distinguish observed relationships from inferred relationships.
+
+AI may suggest potential attack paths, but inferred paths must be labeled as hypotheses until validated.
+
+Do not perform automatic exploitation of graph paths.
+
+Focus on explaining the conditions that make a path possible and recommending defensive controls that break it.
+
+### 14. AI SECURITY COPILOT
+
+Build an AI assistant integrated with the application data.
+
+It should support:
+- Explaining findings.
+- Summarizing assessments.
+- Comparing scan results.
+- Explaining attack-path hypotheses.
+- Prioritizing remediation.
+- Drafting test plans.
+- Generating safe assessment checklists.
+- Explaining logs and indicators.
+- Preparing incident summaries.
+- Producing executive reports.
+- Answering questions about authorized project data.
+- Recommending additional evidence to collect.
+- Explaining uncertainty and confidence.
+
+The assistant must use server-side Gemini integration.
+
+Never expose the Gemini API key in client-side code.
+
+Create a tool registry that defines each available AI action, its input schema, permission requirements, and side effects.
+
+The AI must not have unrestricted shell access or unrestricted access to the application database.
+
+AI-generated tool requests must be schema-validated, permission-checked, scope-checked, and audited before execution.
+
+Require human approval before sensitive actions.
+
+Use retrieved application data as untrusted input. Instructions embedded in logs, uploaded documents, scanner output, or threat-intelligence feeds must never override system policies.
+
+When the AI cannot access evidence, it must say so.
+
+When generating conclusions, provide links to the underlying findings and evidence.
+
+Support streaming responses if compatible with the runtime, plus conversation history, project context, and a way to clear a conversation.
+
+Implement graceful handling of rate limits, quota exhaustion, malformed model output, network failures, and timeouts.
+
+### 15. THREAT INTELLIGENCE
+
+Create an IOC and threat-intelligence subsystem.
+
+Support:
+- IP addresses.
+- Domains.
+- URLs.
+- File hashes.
+- Certificate fingerprints.
+- Threat labels.
+- Source attribution.
+- Confidence.
+- Observation timestamps.
+- Expiration.
+- Relationships to assets, findings, and incidents.
+
+Provide import and export using documented formats where supported.
+
+Create adapters for external intelligence services, including MISP-compatible integration where configured.
+
+Do not claim an IOC is malicious based only on its presence in an unverified source.
+
+Display source, age, confidence, and provenance for each indicator.
+
+Implement deduplication and configurable expiration policies.
+
+Prevent external feeds from injecting executable instructions into AI prompts or application workflows.
+
+### 16. DEFENSIVE SECURITY OPERATIONS
+
+Create a security operations module for:
+- Event ingestion.
+- Normalization.
+- Search and filtering.
+- Alert management.
+- Severity and confidence.
+- Rule-based correlation.
+- Asset context enrichment.
+- Alert ownership.
+- Investigation notes.
+- Evidence attachments.
+- Timeline construction.
+- Incident creation.
+- Resolution and closure.
+
+Support adapters for external SIEM and logging platforms through documented APIs.
+
+Do not invent live events.
+
+Include a clearly marked synthetic dataset for demonstration.
+
+Build a detection-rule interface with versioning, test cases, validation, and change history.
+
+For each detection, explain the underlying evidence and why it matched.
+
+### 17. INCIDENT RESPONSE
+
+Implement an incident management workflow.
+
+Incident records should include:
+- Title and description.
+- Severity.
+- Status.
+- Assigned responder.
+- Affected assets.
+- Related alerts.
+- Evidence.
+- Timeline.
+- Investigation notes.
+- Actions and approvals.
+- Containment recommendations.
+- Recovery checklist.
+- Closure summary.
+
+Provide configurable playbooks for defensive activities such as:
+- Triage.
+- Evidence preservation.
+- Asset isolation recommendations.
+- Credential rotation recommendations.
+- Patch verification.
+- Recovery verification.
+
+Do not execute disruptive containment actions without the appropriate permissions and explicit approval.
+
+Maintain an audit record of all incident state changes and approved actions.
+
+### 18. CLOUD, CONTAINER, WEB, AND API SECURITY
+
+Build modular assessment pages for:
+- Cloud configuration.
+- Kubernetes configuration.
+- Container image findings.
+- Web application security.
+- API inventory and security.
+- Authentication and authorization configuration.
+- TLS and security headers.
+- Dependency vulnerability reports.
+- Infrastructure-as-code review.
+
+Prefer passive analysis, imported scanner results, configuration inspection, and safe validation.
+
+Integrations must be explicit, documented, and disabled until configured.
+
+For API testing, require a declared target and approved scope.
+
+Do not generate destructive payloads or automatically attack production systems.
+
+Support importing SARIF and other suitable scanner output formats where feasible.
+
+Provide finding normalization so that multiple tools can report into one consistent model.
+
+### 19. LABORATORY AND ADVERSARY EMULATION
+
+Create a controlled laboratory subsystem for training and defensive validation.
+
+Include:
+- Lab profiles.
+- Synthetic targets.
+- Isolated environment metadata.
+- Scenario definitions.
+- Preconditions.
+- Expected events.
+- Expected detection results.
+- Execution logs.
+- Cleanup status.
+- Comparison of expected versus observed outcomes.
+
+Scenarios must use benign test actions and synthetic data.
+
+Do not implement malware, credential theft, stealth persistence, covert command-and-control, or unauthorized exfiltration.
+
+Use a provider interface for laboratory integrations and require explicit configuration before attempting to communicate with external environments.
+
+The interface must clearly distinguish:
+- Simulated.
+- Locally executed.
+- Remotely executed.
+- Not configured.
+- Failed.
+
+### 20. REPORTS AND EVIDENCE
+
+Build a reporting subsystem that generates useful, evidence-backed reports.
+
+Report types:
+- Executive security summary.
+- Technical assessment report.
+- Vulnerability register.
+- Asset inventory.
+- Remediation plan.
+- Incident report.
+- Attack-path analysis.
+- Laboratory exercise report.
+- Audit report.
+
+Each report should include:
+- Project and scope.
+- Assessment dates.
+- Methodology.
+- Data sources.
+- Executive summary.
+- Verified findings.
+- Unverified hypotheses.
+- Severity and confidence.
+- Supporting evidence.
+- Business impact.
+- Remediation recommendations.
+- Limitations.
+- Appendices.
+
+Support downloadable PDF and CSV where feasible.
+
+Use proper server-side report generation or a compatible library.
+
+Never create a report that claims tests were completed when they were not executed.
+
+Provide a report preview and an explicit generation status.
+
+Evidence should be linked to the originating asset, assessment, finding, or incident.
+
+Apply access control to evidence downloads and avoid exposing secrets in reports.
+
+### 21. PLUGIN AND INTEGRATION ARCHITECTURE
+
+Implement a typed plugin system.
+
+Each plugin manifest should define:
+- Identifier.
+- Name.
+- Version.
+- Description.
+- Author.
+- Supported platform version.
+- Capabilities.
+- Permissions requested.
+- Configuration schema.
+- Required secrets.
+- Health-check operation.
+- Input and output schemas.
+- Execution limits.
+
+Plugins must be explicitly installed and enabled.
+
+Do not execute arbitrary uploaded code automatically.
+
+Where feasible, run plugins in isolated workers with restricted permissions and bounded resources.
+
+Include a built-in integration registry with connection status, configuration validation, test connection, last successful synchronization, and diagnostic details.
+
+Build initial integration interfaces for:
+- Gemini.
+- MISP-compatible threat intelligence.
+- Supported vulnerability scanners.
+- Git repositories.
+- SIEM and logging providers.
+- Cloud inventory providers.
+- Notification services.
+
+Only mark an integration connected after a real successful connection test.
+
+### 22. USERS, TEAMS, AND RBAC
+
+Implement authentication and authorization.
+
+Roles should include:
+- Platform Administrator.
+- Security Manager.
+- Security Analyst.
+- Penetration Tester.
+- Incident Responder.
+- Auditor.
+- Read-only Viewer.
+
+Use least-privilege permissions.
+
+Support project membership, role assignment, session management, account settings, and administrative audit records.
+
+Enforce permissions in backend handlers and database access paths.
+
+Do not rely on hidden buttons or frontend route guards as the only protection.
+
+Implement secure authentication flows supported by the selected provider.
+
+If password authentication is used, use an established authentication library and secure password hashing; do not implement custom cryptography.
+
+Use secure session handling and appropriate CSRF protection where applicable.
+
+### 23. DATABASE AND DOMAIN MODEL
+
+Create a coherent domain model for at least:
+
+- Users.
+- Teams.
+- Workspaces.
+- Projects.
+- Memberships.
+- Roles and permissions.
+- Authorized scopes.
+- Assets.
+- Relationships.
+- Assessment profiles.
+- Assessment jobs.
+- Findings.
+- Evidence.
+- Threat indicators.
+- Alerts.
+- Incidents.
+- Reports.
+- Integrations.
+- Plugin manifests.
+- AI conversations.
+- Audit events.
+- Notifications.
+
+Use stable identifiers, timestamps, validation, appropriate indexes, and explicit ownership relationships.
+
+Avoid duplicating the same business logic across API handlers and frontend components.
+
+Define data-access functions and domain services.
+
+Include pagination and bounded query sizes for large datasets.
+
+Implement data retention and deletion policies appropriate to each record type.
+
+Never place private API credentials in Firestore documents readable by unauthorized clients.
+
+### 24. BACKEND API
+
+Create a versioned API, for example `/api/v1`.
+
+Group routes by domain:
+- `/auth`
+- `/workspaces`
+- `/projects`
+- `/assets`
+- `/scopes`
+- `/assessments`
+- `/findings`
+- `/attack-paths`
+- `/threat-intel`
+- `/alerts`
+- `/incidents`
+- `/reports`
+- `/integrations`
+- `/plugins`
+- `/audit`
+- `/ai`
+
+Use consistent response envelopes and structured errors.
+
+Validate all request bodies, query parameters, and route parameters.
+
+Implement pagination, filtering, sorting, authorization checks, and appropriate rate limits.
+
+Document important endpoints and provide health-check endpoints that do not disclose sensitive internal information.
+
+Do not create fake endpoints that return hardcoded success responses for unfinished operations.
+
+### 25. SECURITY ENGINEERING
+
+Treat security as a core requirement, not a later feature.
+
+Implement:
+- Server-side authorization.
+- Input validation.
+- Output encoding.
+- Protection against common web vulnerabilities.
+- Secure handling of file uploads.
+- MIME type and file-size validation.
+- Safe path handling.
+- Protection against server-side request forgery.
+- Strict outbound network policies for integrations.
+- Rate limiting.
+- Secure headers.
+- Dependency auditing.
+- Secret management.
+- Audit logging.
+- Data minimization.
+- Secure error handling.
+- Backup and recovery procedures.
+
+For URL-fetching functionality, block private, loopback, link-local, and reserved destinations unless a narrowly scoped, explicitly authorized internal integration requires them. Validate DNS resolutions and redirects to mitigate SSRF and DNS-rebinding risks.
+
+Never expose arbitrary internal network access through a generic URL-fetching API.
+
+Never store API keys in source files, browser bundles, or version-controlled example configuration.
+
+Provide `.env.example` with placeholders only.
+
+Ensure that logs redact credentials, tokens, and other sensitive values.
+
+### 26. FRONTEND ENGINEERING REQUIREMENTS
+
+Create reusable components rather than implementing every page independently.
+
+Suggested shared components:
+- ApplicationShell.
+- Sidebar.
+- TopBar.
+- Breadcrumbs.
+- GlobalSearch.
+- CommandPalette.
+- DataTable.
+- FilterPanel.
+- StatusBadge.
+- SeverityBadge.
+- MetricCard.
+- EmptyState.
+- LoadingState.
+- ErrorState.
+- ConfirmDialog.
+- ScopeIndicator.
+- EvidenceViewer.
+- JobProgress.
+- Timeline.
+- GraphExplorer.
+- AIChatPanel.
+- NotificationCenter.
+
+Use typed API clients and centralized error handling.
+
+Avoid excessive prop drilling where a suitable state-management pattern is justified.
+
+Prevent stale requests from overwriting newer results.
+
+Use accessible dialogs and keyboard-operable controls.
+
+Every interactive control must perform its intended action and provide feedback.
+
+Do not create decorative buttons that do nothing.
+
+### 27. OBSERVABILITY AND RELIABILITY
+
+Implement:
+- Structured server logs.
+- Request identifiers.
+- Job identifiers.
+- Error classification.
+- Health checks.
+- Integration health status.
+- Background-job status.
+- Retry policies where safe.
+- Timeout policies.
+- Cancellation.
+- Basic performance measurements.
+- Diagnostic pages for administrators.
+
+Do not expose stack traces or sensitive diagnostics to ordinary users.
+
+Make failure states actionable by explaining what failed, what data may have been affected, and how an administrator can investigate.
+
+### 28. TESTING AND ACCEPTANCE CRITERIA
+
+Do not consider the project complete until you have checked the actual generated implementation.
+
+At minimum, verify:
+
+**Build and code quality**
+- The frontend builds successfully.
+- The backend starts successfully.
+- TypeScript errors are resolved.
+- Imports and routes are valid.
+- Required dependencies are installed.
+- No required feature depends on an undeclared package.
+
+**Authentication and authorization**
+- Unauthenticated users cannot access protected resources.
+- Read-only users cannot modify records.
+- Users cannot access another project's records without permission.
+- Backend authorization is tested directly.
+
+**Scope enforcement**
+- An out-of-scope target is rejected.
+- An excluded asset is rejected.
+- Missing authorization prevents active assessment.
+- Invalid scope configurations fail safely.
+- Sensitive actions cannot bypass approval requirements.
+
+**Data integrity**
+- Projects and assets persist after refresh.
+- Findings are linked to the correct assets and projects.
+- Duplicate findings are handled consistently.
+- Audit records include actor, action, timestamp, and relevant context.
+
+**UI**
+- Every navigation route works.
+- Forms validate input.
+- Tables support useful sorting and filtering.
+- Loading, error, and empty states are present.
+- Buttons have real behavior.
+- The layout works on desktop and mobile.
+
+**AI**
+- API credentials remain server-side.
+- Model output is validated.
+- Failed model calls produce a useful error.
+- The assistant cannot bypass permissions.
+- AI conclusions link to supporting evidence when available.
+
+**Reports**
+- Reports contain actual stored records.
+- Synthetic data is identified.
+- Unverified hypotheses are distinguished from confirmed findings.
+- Export operations enforce access permissions.
+
+Provide a concise implementation and test summary that distinguishes:
+- Implemented and tested.
+- Implemented but not fully tested.
+- Requires external credentials.
+- Requires additional infrastructure.
+- Not implemented.
+
+Never fabricate passing test results.
+
+### 29. REQUIRED IMPLEMENTATION WORKFLOW
+
+Work incrementally and preserve a coherent, running application.
+
+Phase 1 — Inspect the environment:
+- Inspect the current project files and package configuration.
+- Determine the capabilities of the current AI Studio runtime.
+- Identify existing reusable components and integrations.
+- If the Al-Baron archive is attached, inspect its structure and identify useful architectural concepts.
+- Do not copy its unsafe behavior or assume its modules are complete.
+
+Phase 2 — Establish the foundation:
+- Create the application shell.
+- Implement routing and design tokens.
+- Set up the backend.
+- Set up authentication and database access.
+- Define domain types and validation schemas.
+- Establish logging and error handling.
+
+Phase 3 — Implement the core workflows:
+- Workspaces and projects.
+- Scope management.
+- Asset inventory.
+- Assessment jobs.
+- Findings and evidence.
+- Audit logs.
+- Reports.
+
+Phase 4 — Add intelligence:
+- AI Security Copilot.
+- Threat intelligence.
+- Vulnerability enrichment.
+- Attack-path graph.
+- Remediation recommendations.
+
+Phase 5 — Add integrations:
+- Provider interfaces.
+- Integration settings.
+- Connection tests.
+- Safe simulation mode.
+- Import and export.
+
+Phase 6 — Verify and refine:
+- Run available build and test commands.
+- Fix actual errors.
+- Test critical user journeys.
+- Verify backend permission enforcement.
+- Inspect the interface at different viewport sizes.
+- Remove dead routes and nonfunctional controls.
+- Document remaining limitations.
+
+After each phase, keep the project in a working state.
+
+If context or execution limits prevent finishing everything at once, prioritize a complete, tested foundation and continue implementing the next phase without rewriting stable components unnecessarily.
+
+### 30. REQUIRED DELIVERABLES
+
+Produce a complete project with:
+- Working application frontend.
+- Working backend routes.
+- Persistent data storage.
+- Authentication and authorization.
+- A functional dashboard.
+- Project and asset management.
+- Scope management.
+- Assessment-job management.
+- Findings and evidence management.
+- AI Copilot integration.
+- Reporting.
+- Audit history.
+- Integration settings.
+- A documented plugin interface.
+- Unit and integration tests.
+- Example environment configuration.
+- Setup and deployment instructions.
+- Architecture documentation.
+- Known limitations.
+- A clear list of implemented features and their verification status.
+
+Include a useful demonstration dataset that is clearly identified as synthetic and can be removed.
+
+Do not embed fake credentials or require users to paste secrets into frontend code.
+
+### 31. IMPLEMENTATION PRIORITIES
+
+Use this priority order if time or context is limited.
+
+P0 — Essential:
+- Working application shell.
+- Authentication.
+- Project isolation.
+- Scope enforcement.
+- Persistent assets and findings.
+- Functional assessment-job lifecycle.
+- Audit trail.
+- Secure server-side AI integration.
+- Basic testing and error handling.
+
+P1 — Core intelligence:
+- Asset correlation.
+- Vulnerability lifecycle.
+- Evidence-backed AI analysis.
+- Reporting.
+- Attack-path visualization.
+- Integration health monitoring.
+
+P2 — Advanced capabilities:
+- External scanner adapters.
+- Threat-intelligence feeds.
+- SIEM integration.
+- Cloud and container assessment.
+- Controlled laboratory scenarios.
+- Plugin management.
+- Advanced analytics and collaboration.
+
+Do not sacrifice P0 security requirements to build P2 features faster.
+
+### 32. FINAL OPERATING INSTRUCTIONS
+
+Begin by inspecting the available project context and creating the application structure.
+
+Then implement the actual code.
+
+Do not respond with a long explanation of what you would build instead of building it.
+
+Do not stop after designing the dashboard.
+
+Do not silently replace real operations with mock data.
+
+Do not claim to have executed commands or tests that you could not execute.
+
+Do not introduce unnecessary rewrites when a working component can be extended safely.
+
+When an external dependency or credential is unavailable, implement the correct interface and report the remaining requirement explicitly.
+
+Use clear TypeScript types, modular files, consistent naming, and meaningful comments.
+
+Prefer reliable, maintainable code over unnecessary complexity.
+
+After implementing each major feature, verify that it integrates with the existing application.
+
+Your objective is to deliver the strongest coherent implementation possible within the available environment—not the largest number of files.
+
+**Start now: inspect the project, establish the architecture, implement the first complete end-to-end workflow, verify it, and continue through the priorities above.**
